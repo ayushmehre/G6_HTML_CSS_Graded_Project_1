@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Test Form</title>
-    <link rel="stylesheet" href="lab-test form.css">
+    <link rel="stylesheet" href="styles/lab_test_form.css">
 </head>
 
 <body>
@@ -16,7 +16,8 @@
                 <div id="form" class="cont">
 
                     <div class="formcontent">
-                        <div class="heading">1.Your Contact Details
+                        <div class="input-div">
+                            <p class="heading">1. Your Personal Details</p>
                             <div class="fcontent">
                                 <input type="text" id="Full Name" name="Full name" placeholder="Full Name" required>
 
@@ -30,7 +31,8 @@
                             </div>
                         </div>
 
-                        <div class="heading">2.Address
+                        <div class="input-div">
+                            <p class="heading">2. Your Address</p>
                             <div class="fcontent">
 
                                 <input type="text" id="H-No" name="H-No" placeholder="House Number" required>
@@ -42,7 +44,8 @@
                                 <input type="text" id="Area" name="Area" placeholder="Area" required><br>
 
                                 <label for="District">District:</label>
-                                <select name="District" id="District">
+                                <br>
+                                <select name="District" id="district">
                                     <option value="District">Choose</option>
                                     <option value="Varanasi">Varanasi</option>
                                     <option value="Ghazipur">Ghazipur</option>
@@ -51,10 +54,11 @@
                             </div>
                         </div>
 
-                        <div class="heading">3.Select Test Type
+                        <div class="input-div">
+                            <p class="heading">3. Select the tests you want to perform</p>
                             <div class="fcontent">
 
-                                <input type="checkbox" id="CBC" name="test">
+                                <input type="checkbox" id="CBC" name="test" checked>
                                 <label for="CBC">CBC</label><br>
 
 
@@ -70,12 +74,13 @@
                                 <label for="TSH">Thyroid Stimulating Hormone(TSH)</label><br>
 
 
-                                <input type="checkbox" id="Glucosetest" name="test" checked>
+                                <input type="checkbox" id="Glucosetest" name="test">
                                 <label for="Glucosetest"> Glucose Test</label><br>
                             </div>
                         </div>
 
-                        <div class="heading">4.Do you want a hard copy of the report also?
+                        <div class="input-div">
+                            <p class="heading">4. Do you have any symptoms of COVID-19?</p>
                             <div class="fcontent">
 
                                 <input type="radio" id="yes" name="report">
@@ -87,27 +92,28 @@
                             </div>
                         </div>
 
-                        <div class="heading">5.Select Your Comfortable Date and Time
+                        <div class="input-div">
+                            <p class="heading">5. Select Date and Time for your test</p>
                             <div class="fcontent">
                                 <label for="Date">Date</label>
-                                <input type="date" id="Date" name="Date" required><br>
+                                <input type="date" id="datepicker" name="Date" required><br>
                                 <label for="Time">Time</label>
-                                <input type="time" id="Time" name="Time" required><br>
+                                <input type="time" id="timepicker" name="Time" required><br>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="image" class="cont">
-                    <img src="lab-test.jpg" alt="lab-test">
+                    <img src="images/lab-test.jpg" alt="lab-test">
                 </div>
 
 
             </div>
             <div class="fbtn">
-                <input type="reset" id="btn-txt" name="btn">
+                <input type="reset" id="btn-txt" class="btn_style" name="btn" onClick="document.getElementById('myForm').reset();" >
 
-                <input type="submit" id="btn-txt" name="btn">
+                <input type="submit" id="btn-txt" class ="btn_style" name="btn">
             </div>
         </form>
 
